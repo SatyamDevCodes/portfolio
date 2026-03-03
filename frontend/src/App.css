@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  /* Background aur Text Colors */
+  --color-background: hsl(210 20% 6%);
+  --color-foreground: hsl(210 20% 95%);
+  
+  /* Primary Green/Teal Color */
+  --color-primary: hsl(172 66% 50%);
+  --color-primary-foreground: hsl(210 20% 6%);
+
+  /* Card aur Baki UI elements */
+  --color-card: hsl(210 18% 8%);
+  --color-border: hsl(210 15% 18%);
+  
+  /* Radius aur baki settings */
+  --radius-xl: 0.75rem;
+}
+
+/* Base styles set karne ke liye */
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+}
