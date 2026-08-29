@@ -1,0 +1,64 @@
+"use client"
+
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+const Certificates = () => {
+  const [certs, setCerts] = useState([
+     {
+      _id: "1",
+      title: "Summer Intern",
+      file: "/img/Training_certificate.jpg.jpeg",
+      issuer:"Techpile Technology PVT. LTD."
+    },
+    {
+      _id: "2",
+      title: "Soft Skills Certifications",
+      file: "",
+      issuer:"Centum Foundation (Infosys)"
+    },
+  ]);
+
+  return (
+    <section id="certificates" className="py-20 px-6">
+      <div className="mx-auto max-w-6xl">
+        <h2 className="mb-12 text-3xl font-bold text-center">
+          Certificates
+        </h2>
+
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+          {certs?.map((cert) => (
+            <div
+              key={cert._id}
+              className="rounded-xl border border-border bg-card p-4 shadow-sm"
+            >
+              {cert.fileType?.includes("pdf") ? (
+                <a
+                  href={cert.fileUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-primary underline"
+                >
+                  View PDF
+                </a>
+              ) : (
+                <img
+                  src={cert.file}
+                  alt={cert.title}
+                  className="mb-4 rounded-md"
+                />
+              )}
+
+              <h3 className="font-semibold">{cert.title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {cert.issuer}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Certificates;
