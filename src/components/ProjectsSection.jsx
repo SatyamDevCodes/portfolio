@@ -59,7 +59,7 @@ const ProjectsSection = () => {
     },
     {
       _id:"3",
-      image:"",
+      image:"/img/quiz.jpeg",
       title:"Quiz Application",
       description:"Developed an interactive quiz web application with separate functionality for user and administrator.",
       live:"",
