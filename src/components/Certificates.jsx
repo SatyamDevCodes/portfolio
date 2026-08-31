@@ -14,7 +14,7 @@ const Certificates = () => {
     {
       _id: "2",
       title: "Soft Skills Certifications",
-      file: "",
+      file: "/img/soft_skill.jpeg",
       issuer:"Centum Foundation (Infosys)"
     },
   ]);
