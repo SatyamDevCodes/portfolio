@@ -42,7 +42,7 @@ const itemVariants = {
         {
         _id:"2",
         institution:"Patel Memorial Inter College Atraulia, Azamgarh",
-        degree:`Intermediate (12<sup>th</sup>)`,
+        degree:"Intermediate (12th)",
         graduationYear:"2023",
         cgpa:"63%",
         courses:[
